@@ -5,6 +5,10 @@
 
 데모: https://csslick.github.io/slider201016/
 
+## Add script in head tag
+```
+  <script src="slider.js"></script>
+```
 
 ## code markup
 ```
@@ -27,3 +31,4 @@
     </div>
   </section>
 ```  
+
