@@ -26,11 +26,9 @@ $(function () {
   // 슬라이더 재생
   function sliderStart() {
     slider = setInterval(function () {
+      img_num = img_num + 1; // 다음 이미지 번호로
       // 마지막 이미지 번호이면 처음으로 
-      if (img_num >= 2) { img_num = 0 } else {
-        // 다음 이미지 번호로
-        img_num = img_num + 1;
-      }
+      if (img_num > 2) { img_num = 0 } 
       changeSlider(img_num);
     }, duration);
   }
@@ -56,18 +54,20 @@ $(function () {
 
   // 이전 이미지 버튼
   $('.controls > .left').click(function () {
-    if(img_num > 0) {
-      img_num = img_num - 1
-    } else { img_num = 2; }
+    img_num = img_num - 1
+    if(img_num < 0) {
+     img_num = 2;
+    }
     console.log(img_num);
     changeSlider();
   })
 
   // 다음 이미지 버튼
   $('.controls > .right').click(function () {
-    if(img_num < 2) {
-      img_num = img_num + 1;
-    } else { img_num = 0; }
+    img_num = img_num + 1;
+    if(img_num > 2) {
+      img_num = 0;
+    } 
     console.log(img_num);
     changeSlider();
   })
