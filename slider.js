@@ -13,7 +13,7 @@ $(function () {
   $('.slider > img').eq(img_num).fadeIn();
 
   // 
-  function changeSlider() {
+  function changeSlider(img_num) {
     // 전체 이미지 fadeOut
     $('.slider > img').fadeOut();
     // 현재 이미지 fadeIn
@@ -28,7 +28,7 @@ $(function () {
     slider = setInterval(function () {
       img_num = img_num + 1; // 다음 이미지 번호로
       // 마지막 이미지 번호이면 처음으로 
-      if (img_num > 2) { img_num = 0 } 
+      if (img_num > 2) { img_num = 0; } 
       changeSlider(img_num);
     }, duration);
   }
