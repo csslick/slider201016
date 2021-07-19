@@ -59,7 +59,7 @@ $(function () {
      img_num = 2;
     }
     console.log(img_num);
-    changeSlider();
+    changeSlider(img_num);
   })
 
   // 다음 이미지 버튼
@@ -69,7 +69,7 @@ $(function () {
       img_num = 0;
     } 
     console.log(img_num);
-    changeSlider();
+    changeSlider(img_num);
   })
 
 }) // $end
